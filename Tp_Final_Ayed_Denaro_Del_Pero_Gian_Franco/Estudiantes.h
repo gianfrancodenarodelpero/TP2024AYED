@@ -12,20 +12,22 @@ typedef struct Estudiantes * estudiante;
 Estudiantes* crearEstudiante(int dni , char apellido[30] ,char nombre[30]);
 
 //mostrar estudiante
-void mostrarEstudiante(estudiante*);
+void mostrarEstudiante(estudiante* e);
 
 //getters y setters
 
-int getDni(estudiante*);
-char* getApellido(estudiante*);
-char* getnombre(estudiante*);
+int getDni(estudiante* e);
+char* getApellido(estudiante* e);
+char* getnombre(estudiante* e);
 
-int setDni(estudiante* , int nuevoDni);
-char* setApellido(estudiante*, char nuevoApellido[30]);
-char* setnombre(estudiante*, char nuevoNombre[30]);
+int setDni(estudiante* e , int nuevoDni);
+char* setApellido(estudiante* e, char nuevoApellido[30]);
+char* setnombre(estudiante* e, char nuevoNombre[30]);
 
 //Elimina estudiante
-void EliminarEstudiante(estudiante);
+void EliminarEstudiante(estudiante* e);
+
+// faltan agregar mas funciones de materias
 
 
 #endif // ESTUDIANTES_H_INCLUDED
