@@ -1,8 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "Estudiantes.h"
+#include "Lista.h"
+#include "ListaMaterias.h"
+#include "Sistema.h"
 
-int main()
+int main(void)
 {
-    printf("Hello world!\n");
+     menuComplejo();
+
+    puts("");
     return 0;
 }

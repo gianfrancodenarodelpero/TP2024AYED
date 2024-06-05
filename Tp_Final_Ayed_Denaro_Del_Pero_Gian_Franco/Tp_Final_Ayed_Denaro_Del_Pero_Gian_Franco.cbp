@@ -31,6 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="CargarDatos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CargarDatos.h" />
 		<Unit filename="Estudiantes.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -43,15 +47,19 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="ListaMaterias.h" />
-		<Unit filename="Nodo.c">
+		<Unit filename="MateriaNota.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Nodo.h" />
+		<Unit filename="MateriaNota.h" />
+		<Unit filename="MateriaSistema.h" />
 		<Unit filename="Sistema.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Sistema.h" />
 		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="materiaSistema.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

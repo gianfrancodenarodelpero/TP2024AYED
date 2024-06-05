@@ -1,30 +1,20 @@
 #ifndef LISTAMATERIAS_H_INCLUDED
 #define LISTAMATERIAS_H_INCLUDED
+#include "Lista.h"
 
-
-struct Materias;
-
-typedef struct Materias * materia;
-
+typedef struct Materia Materia;
 //crea una materia
-Materias* crearMateria(int id ,char nombre[30] , int cupo;);
-
+Materia* crearMateria(int id, char nombre[45]);
 //mostrar materia
-void mostrarMateria(materia* m);
-
+void mostrarMateria(Materia*);
 //getter y setter
-int getId (materia* m);
-char * getNombre (materia* m);
-int getCupo(materia* m);
-
-
-void setId (materia* m, int nuevoId);
-void setNombre (materia* m , char nuevoNombre[30]);
-void setCupo(materia* m, int nuevoCupo);
-
+int getIdMateria(Materia*);
+const char* getNombreMateria(Materia*);
+int getCupo(Materia*);
+void setId (Materia*, int nuevoId);
+void setNombreMateria (Materia* , char nuevoNombre[45]);
+void setCupo(Materia* , int nuevoCupo);
 
 //Elimina materia
-void EliminarMateria(materia* m);
-
-
+void destruirMateria(Materia*);
 #endif // LISTAMATERIAS_H_INCLUDED

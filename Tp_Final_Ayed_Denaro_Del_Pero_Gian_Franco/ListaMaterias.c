@@ -3,56 +3,47 @@
 #include <string.h>
 #include "ListaMaterias.h"
 
-struct Materias{
+
+struct Materia{
     int id;
-    char nombre[30];
-    int cupo = 100;
+    char nombre[45];
+    int cupo;
 };
-
-
 
 //crea una materia
-Materias* crearMateria(int id ,char nombre[30] , int cupo;){
-    Materias* m = (Materias*)malloc(sizeof(Materias));
+Materia* crearMateria(int id, char nombre[45]){
+    Materia* m = (Materia*)malloc(sizeof(Materia));
+
     m->id = id;
-    strcpy(m->nombre,nombre);
-    m->cupo = cupo-1;
+    strcpy(m->nombre, nombre);
 
     return m;
-};
-
+}
 //mostrar materia
-void mostrarMateria(materia* m){
-    printf("ID: %d\n",m->id);
-    printf("Nombre: %s\n",m->nombre);
-    printf("Cupo: %d\n",m->cupo);
-};
-
+void mostrarMateria(Materia* m){
+    printf("ID: %d\n", m->id);
+    printf("Nombre: %s\n", m->nombre);
+}
 //getter y setter
-int getId (materia* m){
+int getIdMateria(Materia* m){
     return m->id;
-};
+}
 
-char * getNombre (materia* m){
+const char* getNombreMateria(Materia* m){
     return m->nombre;
-};
-int getCupo(materia* m){
+}
+
+int getCupo(Materia* m){
     return m->cupo;
 };
+void setNombreMateria(Materia* m, char nombre[45]){
+    strcpy(m->nombre, nombre);
+}
 
-
-void setId (materia* m, int nuevoId){
-    m->id = nuevoId;;
-};
-void setNombre (materia* m , char nuevoNombre[30]){
-    strcpy(m->nombre , nombre);
-};
-void setCupo(materia* m, int nuevoCupo){
+void setCupo(Materia* m , int nuevoCupo){
     m->cupo = nuevoCupo;
 };
-
-
 //Elimina materia
-void EliminarMateria(materia* m){
+void destruirMateria(Materia* m){
     free(m);
-};
+}

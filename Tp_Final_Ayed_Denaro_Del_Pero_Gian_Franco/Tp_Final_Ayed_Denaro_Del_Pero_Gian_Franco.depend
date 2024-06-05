@@ -1,0 +1,88 @@
+# depslib dependency file v1.0
+1717503240 source:c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\nodo.c
+
+1717611223 source:c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\estudiantes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Estudiantes.h"
+	"MateriaNota.h"
+	"Sistema.h"
+
+1717603214 c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\lista.h
+	<stdbool.h>
+
+1717602890 c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\listamaterias.h
+	"Lista.h"
+
+1717603214 source:c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"Lista.h"
+
+1717602890 source:c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\listamaterias.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ListaMaterias.h"
+
+1717602047 source:c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\materianota.c
+	<stdio.h>
+	<stdlib.h>
+	"MateriaNota.h"
+
+1717602047 c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\materianota.h
+	"ListaMaterias.h"
+
+1717608653 source:c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\cargardatos.c
+	<stdio.h>
+	<stdlib.h>
+	"Lista.h"
+	"ListaMaterias.h"
+	"MateriaNota.h"
+	"MateriaSistema.h"
+	"Estudiantes.h"
+	"CargarDatos.h"
+
+1717602140 c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\materiasistema.h
+	"Lista.h"
+	"ListaMaterias.h"
+	"Estudiantes.h"
+
+1717611005 c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\estudiantes.h
+	"Lista.h"
+	"ListaMaterias.h"
+
+1717601320 c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\cargardatos.h
+	"Lista.h"
+
+1717602371 c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\sistema.h
+	<stdbool.h>
+
+1717602493 source:c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Estudiantes.h"
+	"Lista.h"
+	"ListaMaterias.h"
+	"Sistema.h"
+
+1717602087 source:c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\materiasistema.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"MateriaSistema.h"
+	"Sistema.h"
+
+1717612154 source:c:\users\gianf\documents\trabajoscodeblocks\tp_final_ayed_denaro_del_pero_gian_franco\sistema.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"MateriaNota.h"
+	"MateriaSistema.h"
+	"Estudiantes.h"
+	"Sistema.h"
+	"CargarDatos.h"
+	"Lista.h"
+

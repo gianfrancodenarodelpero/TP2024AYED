@@ -3,31 +3,29 @@
 
 #include <stdbool.h> // habilito valores booleanos
 
+
 void limpiarPantalla();
-void limpiarBuffer();
 void pedidoDeOpciones(char opcion[30]);
 
 //muestreo por pantalla
-void mostrarCalificaciones(void* d);
-void mostrarMaterias(void* m);
-void mostrarEstudiantes(void* e);
-void mostrarMateriasEnElSistema(void* m);
+void mostrarCalificaciones(void*);
+void mostrarMaterias(void*);
+void mostrarEstudiantes(void*);
+void mostrarEstudiantesCompletos(void*);
+void mostrarMateriasEnElSistema(void*);
 
 //comparaciones con valores booleanos
-bool compararPromediosDeEstudiantes(void* a, void* b);
-bool compararCantidadDeMateriasAprobadas(void* a , void* b);
-bool esIdDeMateriaCorrecto(void* m, void* a);
-bool esMateria(void* a, void* b);
-bool compararIDMateriaSistema(void* m1, void* m2);
-bool compararDNIEstudiante(void* e1, void* e2);
-int comprobarSiEsValorValido(Lista* l, char opcion[30], bool callback(void*, void*));
-bool existeEstudianteEnMateria(void* e, void* el);
+bool compararPromediosEstudiantes(void*, void*);
+bool compararCantidadDeMateriasAprobadas(void*, void*);
+
+bool esIdDeMateriaCorrecto(void*, void*);
+bool esMateria(void*, void*);
 
 //destruir
-void destruirDatoListaMateriaNota(void* m);
-void destruirDatoListaMaterias(void* m);
-void destruirDatoListaEstudiantes(void* e);
-void destruirDatoListaMateriaSistema(void* m);
+void destruirDatoListaMateriaNota(void*);
+void destruirDatoListaMaterias(void*);
+void destruirDatoListaEstudiantes(void*);
+void destruirDatoListaMateriaSistema(void*);
 
 //menues
 void menuSimple();

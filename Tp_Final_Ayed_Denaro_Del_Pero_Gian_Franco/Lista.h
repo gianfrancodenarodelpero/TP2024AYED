@@ -1,51 +1,37 @@
 #ifndef LISTA_H_INCLUDED
 #define LISTA_H_INCLUDED
 
+#include <stdbool.h>
 
-struct Lista;
+typedef struct Lista Lista;
 
-typedef Lista * lista;
+Lista* crearLista();
 
-lista crearLista();
-
-int getTamanio(lista* l);
-
+int getTamanioLista(Lista*);
 //mostrar lista
-void mostrarLista(lista* l);
-
-
-//eliminar lista
-void eliminarLista(lista* l);
-void destruirListaYDatos(lista* l, void callback(void*));
-
+void mostrarLista(Lista*, void callback(void*));
 //insertar datos a la lista
-
-void insertarDatoAlInicioEnLaLista(lista* l, void* d);
-bool insertarDatoEnLaLista(lista* l, int pos, void* d);
-void insertarDatoAlFinalDeLaLista(lista* l, void* d);
-void insertarDatoEnOrdenEnLista(lista* l, void* d, bool callback(void*, void*));
-
+void insertarDatoAlInicioEnLaLista(Lista*, void*);
+bool insertarDatoEnLaLista(Lista*, int, void*);
+void insertarDatoAlFinalDeLaLista(Lista*, void*);
+void insertarDatoEnOrdenEnLista(Lista*, void*, bool callback(void*, void*));
 //obtener datos de la lista
-void* obtenerDatoInicialDeLaLista(lista* l);
-void* obtenerDatoEnLaLista(lista* l, int pos);
-void* obtenerDatoFinalDeLaLista(lista* l);
-
+void* obtenerDatoInicialDeLaLista(Lista*);
+void* obtenerDatoEnLaLista(Lista*, int);
+void* obtenerDatoFinalDeLaLista(Lista*);
 //eliminar datos de la lista
-void* eliminarDatoInicialDeLaLista(lista* l);
-void* eliminarDatoDeLaLista(lista* l, int pos);
-void* eliminarDatoFinalDeLaLista(lista* l);
-
+void* eliminarDatoInicialDeLaLista(Lista*);
+void* eliminarDatoDeLaLista(Lista*, int);
+void* eliminarDatoFinalDeLaLista(Lista*);
 //duplicar lista
-lista* duplicar(lista* l);
-
+Lista* duplicar(Lista*);
 //ordenar lista
-void ordenarLista(lista* l, bool callback(void*, void*));
-
-
+void ordenarLista(Lista*, bool callback(void*, void*));
 //buscar dato
-int buscarDato(lista* l, void* d, bool callback(void*, void*));
-
-
+int buscarDato(Lista*, void*, bool callback(void*, void*));
+//eliminar lista
+void destruirLista(Lista*);
+void destruirListaYDatos(Lista*, void callback(void*));
 
 
 

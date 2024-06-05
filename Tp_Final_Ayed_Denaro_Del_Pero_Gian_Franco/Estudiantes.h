@@ -4,30 +4,34 @@
 #include "Lista.h"
 #include "ListaMaterias.h"
 
-struct Estudiantes;
 
-typedef struct Estudiantes * estudiante;
+typedef struct Estudiante Estudiante;
 
-//crea un estudiante
-Estudiantes* crearEstudiante(int dni , char apellido[30] ,char nombre[30]);
+Estudiante* crearEstudiante(int dni, char apellido[30], char nombre[30]);
 
-//mostrar estudiante
-void mostrarEstudiante(estudiante* e);
+// muestra info basica del estudiante.
+void mostrarEstudiante(Estudiante*);
+// muestra el 100% de su informacion.
+void mostrarEstudianteCompleto(Estudiante*);
 
-//getters y setters
+int getDNI(Estudiante*);
+const char* getApellidoEstudiante(Estudiante*);
+const char* getNombreEstudiante(Estudiante*);
+// Retorno un duplicado de la lista para asegurarme que no sea modificada en otra parte
+// del programa.
+Lista* getMateriasAprobadasDelEstudiante(Estudiante*);
+int getCantidadDeMateriasAprobadas(Estudiante*);
+float getPromedioEstudiante(Estudiante*);
 
-int getDni(estudiante* e);
-char* getApellido(estudiante* e);
-char* getnombre(estudiante* e);
+void setApellidoEstudiante(Estudiante*, char apellido[30]);
+void setNombreEstudiante(Estudiante*, char nombre[30]);
 
-int setDni(estudiante* e , int nuevoDni);
-char* setApellido(estudiante* e, char nuevoApellido[30]);
-char* setnombre(estudiante* e, char nuevoNombre[30]);
+// Agrega la materia aproba al estudiante con su calificacion. Si fuera una nota
+// menor a 4 o el alumno ya tuviera la materia aprobada no la carga
+void agregarMateriaAprobada(Estudiante*, Materia*, int nota);
 
-//Elimina estudiante
-void EliminarEstudiante(estudiante* e);
+void destruirEstudiante(Estudiante*);
 
-// faltan agregar mas funciones de materias
 
 
 #endif // ESTUDIANTES_H_INCLUDED
