@@ -10,21 +10,21 @@ typedef struct Materias * materia;
 Materias* crearMateria(int id ,char nombre[30] , int cupo;);
 
 //mostrar materia
-void mostrarMateria(materia*);
+void mostrarMateria(materia* m);
 
 //getter y setter
-int getId (materia*);
-char * getNombre (materia*);
-int getCupo(materia*);
+int getId (materia* m);
+char * getNombre (materia* m);
+int getCupo(materia* m);
 
 
-void setId (materia* , int nuevoId);
-void setNombre (materia* , char nuevoNombre[30]);
-void setCupo(materia* , int nuevoCupo);
+void setId (materia* m, int nuevoId);
+void setNombre (materia* m , char nuevoNombre[30]);
+void setCupo(materia* m, int nuevoCupo);
 
 
 //Elimina materia
-void EliminarMateria(materia);
+void EliminarMateria(materia* m);
 
 
 #endif // LISTAMATERIAS_H_INCLUDED

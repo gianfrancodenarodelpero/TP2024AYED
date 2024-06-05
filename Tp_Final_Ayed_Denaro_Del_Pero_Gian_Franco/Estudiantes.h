@@ -1,6 +1,8 @@
 #ifndef ESTUDIANTES_H_INCLUDED
 #define ESTUDIANTES_H_INCLUDED
 
+#include "Lista.h"
+#include "ListaMaterias.h"
 
 struct Estudiantes;
 
@@ -16,7 +18,7 @@ void mostrarEstudiante(estudiante*);
 
 int getDni(estudiante*);
 char* getApellido(estudiante*);
-char* setnombre(estudiante*, char nuevoNombre[30]);
+char* getnombre(estudiante*);
 
 int setDni(estudiante* , int nuevoDni);
 char* setApellido(estudiante*, char nuevoApellido[30]);
