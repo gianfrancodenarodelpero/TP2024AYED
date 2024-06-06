@@ -9,8 +9,9 @@
 
 Lista* cargarMaterias(){
     Lista* list = crearLista();
+
+    //cargar materias
     insertarDatoAlInicioEnLaLista(list,(void*)crearMateria(8600, "Programacion de computadoras"));
-    //insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(8600, "Programacion de computadoras"));
     insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(8601, "Organizacion de computadoras"));
     insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(8602, "Arquitectura de Computadoras"));
     insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(8603, "Matematicas 1"));
@@ -56,24 +57,13 @@ Lista* cargarMaterias(){
     insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(5039, "Ingenieria de software empirica"));
     insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(12, "Taller de gestion editorial y ciencia abierta"));
     insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(5042, "Seminario de trabajo final"));
-/*
-insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(8600, "Programacion"));
-    insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(8604, "Matematicas"));
-    insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(5030, "Ingles"));
-    insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(8603, "Arquitectura de Computadoras"));
-    insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(8607, "IPC"));
-    insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(8611, "AyED"));
-    insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(8612, "POO"));
-    insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(8615, "BB.DD."));
-    insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(8620, "Sist. y Org."));
-    insertarDatoAlFinalDeLaLista(list, (void*)crearMateria(11, "Seminario de DD.HH."));
-*/
+
     return list;
 }
 
 Lista* cargarEstudiantes(Lista* materias){
     Lista* list = crearLista();
-
+    //cargar alumnos y materias aprobadas
     //Alumno 1:
     Estudiante* e1 = crearEstudiante(4106, "Riquelme", "Juan");
     agregarMateriaAprobada(e1, (Materia*)obtenerDatoEnLaLista(materias, 6), 4);
@@ -119,6 +109,30 @@ Lista* cargarEstudiantes(Lista* materias){
     agregarMateriaAprobada(e8, (Materia*)obtenerDatoEnLaLista(materias, 0), 4);
     insertarDatoAlFinalDeLaLista(list, (void*)e8);
 
+    //Alumno 9:
+    Estudiante* e9 = crearEstudiante(1234, "gasper", "joan");
+    agregarMateriaAprobada(e9, (Materia*)obtenerDatoEnLaLista(materias, 17), 8);
+    agregarMateriaAprobada(e9, (Materia*)obtenerDatoEnLaLista(materias, 12), 6);
+    agregarMateriaAprobada(e9, (Materia*)obtenerDatoEnLaLista(materias, 10), 7);
+    insertarDatoAlFinalDeLaLista(list, (void*)e9);
+    //Alumno 10:
+    Estudiante* e10 = crearEstudiante(4111, "denaro", "stefano");
+    agregarMateriaAprobada(e10, (Materia*)obtenerDatoEnLaLista(materias, 13), 8);
+    agregarMateriaAprobada(e10, (Materia*)obtenerDatoEnLaLista(materias, 15), 7);
+    agregarMateriaAprobada(e10, (Materia*)obtenerDatoEnLaLista(materias, 10), 4);
+    insertarDatoAlFinalDeLaLista(list, (void*)e10);
+    //Alumno 11:
+    Estudiante* e11 = crearEstudiante(3987, "cuatrini", "Nati");
+    agregarMateriaAprobada(e11, (Materia*)obtenerDatoEnLaLista(materias, 3), 8);
+    agregarMateriaAprobada(e11, (Materia*)obtenerDatoEnLaLista(materias, 1), 9);
+    agregarMateriaAprobada(e11, (Materia*)obtenerDatoEnLaLista(materias, 2), 3);
+    insertarDatoAlFinalDeLaLista(list, (void*)e11);
+    //Alumno 12:
+    Estudiante* e12 = crearEstudiante(4444, "Neymar", "Jr");
+    agregarMateriaAprobada(e12, (Materia*)obtenerDatoEnLaLista(materias, 10), 9);
+    agregarMateriaAprobada(e12, (Materia*)obtenerDatoEnLaLista(materias, 8), 2);
+    agregarMateriaAprobada(e12, (Materia*)obtenerDatoEnLaLista(materias, 20), 6);
+    insertarDatoAlFinalDeLaLista(list, (void*)e12);
     return list;
 }
 
@@ -147,7 +161,7 @@ Lista* cargarMateriasSistema(Lista* lMaterias, Lista* lEstudiantes){
     insertarDatoAlFinalDeLaLista(list, (MateriaSistema*)crearMateriaSistema((Materia*)obtenerDatoEnLaLista(lMaterias, 18), 4));
     insertarDatoAlFinalDeLaLista(list, (MateriaSistema*)crearMateriaSistema((Materia*)obtenerDatoEnLaLista(lMaterias, 19), 3));
 
-   /*
+
     insertarDatoAlFinalDeLaLista(list, (MateriaSistema*)crearMateriaSistema((Materia*)obtenerDatoEnLaLista(lMaterias, 20), 4));
     insertarDatoAlFinalDeLaLista(list, (MateriaSistema*)crearMateriaSistema((Materia*)obtenerDatoEnLaLista(lMaterias, 21), 2));
     insertarDatoAlFinalDeLaLista(list, (MateriaSistema*)crearMateriaSistema((Materia*)obtenerDatoEnLaLista(lMaterias, 22), 2));
@@ -173,8 +187,8 @@ Lista* cargarMateriasSistema(Lista* lMaterias, Lista* lEstudiantes){
     insertarDatoAlFinalDeLaLista(list, (MateriaSistema*)crearMateriaSistema((Materia*)obtenerDatoEnLaLista(lMaterias, 42), 2));
     insertarDatoAlFinalDeLaLista(list, (MateriaSistema*)crearMateriaSistema((Materia*)obtenerDatoEnLaLista(lMaterias, 43), 5));
     insertarDatoAlFinalDeLaLista(list, (MateriaSistema*)crearMateriaSistema((Materia*)obtenerDatoEnLaLista(lMaterias, 44), 4));
-    insertarDatoAlFinalDeLaLista(list, (MateriaSistema*)crearMateriaSistema((Materia*)obtenerDatoEnLaLista(lMaterias, 45), 3));
-*/
+
+
 
 
     for(int i=0; i<getTamanioLista(list); i++){

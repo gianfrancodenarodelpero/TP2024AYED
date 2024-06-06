@@ -156,7 +156,6 @@ void menuComplejo(){
         puts("1- Ver materias.");
         puts("2- Ver estudiantes.");
         puts("3- inscribir estudiante");
-        puts("4- inscribir");
         puts("0- Finalizar.");
         do {
             pedidoDeOpciones(opcion);
@@ -245,8 +244,8 @@ void menuComplejo(){
                     puts("Agregar nombre del alumno: \n");
                     fflush(stdin);
                     gets(auxNombre);
-                  Estudiante * lis = crearEstudiante(auxDni,auxApellido,auxNombre);
-
+                //  Estudiante * lis = crearEstudiante(auxDni,auxApellido,auxNombre);
+                    //quise agregar un menu con la opcion de de agregar estudiantes por teclado no llegue a tiempo
 
 
 
